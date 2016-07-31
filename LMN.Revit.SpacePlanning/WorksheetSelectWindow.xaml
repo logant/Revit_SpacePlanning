@@ -1,0 +1,82 @@
+﻿<Window x:Class="LMN.Revit.SpacePlanning.WorksheetSelectWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LMN.Revit.SpacePlanning"
+             mc:Ignorable="d" 
+             Title="Select Worksheet"
+             Background="Transparent"
+             WindowStyle="None"
+             AllowsTransparency="True"
+             WindowStartupLocation="CenterOwner"
+             ResizeMode="NoResize"
+             Width="410"
+             Height="150">
+    <Window.Resources>
+        <Style x:Key="typicalButtonStyle" TargetType="Button">
+            <Setter Property="Foreground" Value="#FF404040"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Background" Value="#FF606060"/>
+        </Style>
+    </Window.Resources>
+    <Border Background="Transparent" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+        <Grid>
+            <!--Main Background-->
+            <Rectangle Fill="WhiteSmoke" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0"/>
+            <Rectangle Fill="#FF404040" Width="1" VerticalAlignment="Stretch" HorizontalAlignment="Left" Margin="0"/>
+            <Rectangle Fill="#FF404040" Width="1" VerticalAlignment="Stretch" HorizontalAlignment="Right" Margin="0"/>
+            <Rectangle Fill="#FF404040" Height="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="0"/>
+            <Rectangle Fill="#FF404040" Height="15" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Margin="0"/>
+
+
+            <Label Content="Select a Worksheet" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" FontSize="16" Foreground="#FF404040" FontFamily="Arial" FontWeight="Bold"/>
+            <Label Content="Worksheet:" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" FontSize="12" Foreground="#FF404040" FontFamily="Arial"/>
+            <ComboBox Name="wsComboBox" HorizontalAlignment="Stretch" Margin="10,60,10,0" VerticalAlignment="Top" SelectionChanged="wsComboBox_SelectionChanged"/>
+
+            <!--Buttons-->
+            <Button x:Name="cancelButton" Click="cancelButton_Click" Style="{StaticResource typicalButtonStyle}" MouseEnter="cancelButton_MouseEnter" MouseLeave="cancelButton_MouseLeave"
+                    HorizontalAlignment="Right" Width="80" Height="30" VerticalAlignment="Bottom" Margin="0,0,1,15" IsCancel="True">
+                <Button.Content>
+                    <Grid Width="80" Height="30">
+                        <Rectangle x:Name="cancelButtonRect" Fill="Transparent"/>
+                        <TextBlock Text="Cancel" TextAlignment="Center"/>
+                    </Grid>
+                </Button.Content>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <ContentPresenter Margin="{TemplateBinding Control.Padding}"
+                                          HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+                                          VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+                                          SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+                                          ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}"
+                                          RecognizesAccessKey="True"
+                                          Content="{TemplateBinding ContentControl.Content}"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="okButton" Click="okButton_Click" Style="{StaticResource typicalButtonStyle}" MouseEnter="okButton_MouseEnter" MouseLeave="okButton_MouseLeave"
+                    HorizontalAlignment="Right" Width="80" Height="30" VerticalAlignment="Bottom" Margin="0,0,81,15">
+                <Button.Content>
+                    <Grid Width="80" Height="30">
+                        <Rectangle x:Name="okButtonRect" Fill="Transparent"/>
+                        <TextBlock Text="OK" TextAlignment="Center"/>
+                    </Grid>
+                </Button.Content>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <ContentPresenter Margin="{TemplateBinding Control.Padding}"
+                                          HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+                                          VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+                                          SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+                                          ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}"
+                                          RecognizesAccessKey="True"
+                                          Content="{TemplateBinding ContentControl.Content}"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Grid>
+    </Border>
+</Window>

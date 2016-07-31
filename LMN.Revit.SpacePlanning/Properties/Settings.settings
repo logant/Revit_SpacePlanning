@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="LMN.Revit.SpacePlanning.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SchemaIdElement" Type="System.Guid" Scope="User">
+      <Value Profile="(Default)">a198cf0c-18be-41c8-a128-d749cf65c559</Value>
+    </Setting>
+    <Setting Name="SchemaIdCollection" Type="System.Guid" Scope="User">
+      <Value Profile="(Default)">75e2beb9-1b9d-47f2-aaa6-4e89d47c6259</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
