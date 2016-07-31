@@ -152,7 +152,7 @@ namespace LMN.Revit.SpacePlanning
                                         string rName = mass.RoomName;
                                         string rNumber = mass.RoomNumber;
                                         string groupName = mass.GroupId;
-                                        //TaskDialog.Show("Mass", "GroupName: " + groupName + "\nrName: " + rName + "\nrNumber: " + rNumber);
+                                        
                                         ElementId matId = null;
                                         List<Element> massesToupdate = new List<Element>();
                                         foreach(Element elem in massElements)
@@ -182,7 +182,6 @@ namespace LMN.Revit.SpacePlanning
                                             }
                                             
                                         }
-                                        //TaskDialog.Show("Testing", "Group: " + groupIndex.ToString() + "\nObject: " + innerIndex.ToString());
 
                                         // Calculate width and depth
                                         double sideLength = 10;
@@ -190,7 +189,6 @@ namespace LMN.Revit.SpacePlanning
                                             sideLength = Math.Sqrt(mass.ProgramArea);
                                         if (sideLength > maxX)
                                             maxX = sideLength;
-                                        //TaskDialog.Show("Test", "MassesToUpdate: " + massesToupdate.Count.ToString());
                                         if (massesToupdate.Count > 0)
                                         {
                                             // Update mass element
@@ -264,8 +262,6 @@ namespace LMN.Revit.SpacePlanning
 
                                                 //FamilyInstance
                                                 FamilyInstance fi = doc.Create.NewFamilyInstance(loc, selectedSymbol, Autodesk.Revit.DB.Structure.StructuralType.NonStructural);
-
-
 
                                                 // Set the parameters as necessary
                                                 if (parameterNames[0] != null)
