@@ -68,10 +68,6 @@ namespace LMN.Revit.SpacePlanning
         // massGroupingParams, see above
         // symbolId, see selectedSymbol above
         // levelId, see selectedLevel above
-         
-
-
-
 
         public ImportProgramForm(UIDocument uidoc, string excelPath)
         {
@@ -332,7 +328,6 @@ namespace LMN.Revit.SpacePlanning
                 //}
                 t.Commit();
             }
-
             Close();
         }
 

@@ -63,9 +63,29 @@ namespace LMN.Revit.SpacePlanning.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CreateMasses_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("CreateMasses_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gear {
             get {
                 object obj = ResourceManager.GetObject("gear", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ModifyBoxes_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("ModifyBoxes_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

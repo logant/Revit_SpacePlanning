@@ -59,8 +59,9 @@
       <HintPath>C:\Program Files\Autodesk\Revit 2016\RevitAPIUI.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="RevitCommon">
-      <HintPath>..\..\..\..\RevitCommon.dll</HintPath>
+    <Reference Include="RevitCommon, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\tlogan\Documents\Git\RevitCommon\RevitCommon\bin\x64\Release\RevitCommon.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -90,6 +91,7 @@
     <Compile Include="ParamSettingCtrl.xaml.cs">
       <DependentUpon>ParamSettingCtrl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PlanningApp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -150,6 +152,12 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="images\ModifyBoxes_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="images\CreateMasses_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
